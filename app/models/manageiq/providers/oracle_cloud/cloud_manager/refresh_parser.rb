@@ -85,7 +85,7 @@ module ManageIQ::Providers
           :ems_ref     => volume.name,
           :name        => volume.name,
           :status      => volume.status,
-          :description => parse_uid_from_url(volume.imagelist),
+          #:description => parse_uid_from_url(volume.imagelist),
           :size        => volume.size,
         }
 
@@ -158,7 +158,7 @@ module ManageIQ::Providers
           :raw_power_state  => instance.state,
           :flavor           => flavor,
           :boot_time        => instance.start_time,
-          :operating_system => extract_os(instance),
+          #:operating_system => extract_os(instance),
           # :labels            => instance.tags,
           :hardware         => {
             :cpu_total_cores => flavor[:cpus],
